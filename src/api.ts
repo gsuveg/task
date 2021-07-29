@@ -19,7 +19,6 @@ export const save = (payload: AppState) => {
 }
 
 export const load = async () => { 
-  console.log(`${process.env.REACT_APP_API_ENDPOINT}/api/getflow`)
   const response = await fetch(`${process.env.REACT_APP_API_ENDPOINT}/api/getflow`)
   if (response.ok) {
     return response.json() as Promise<AppState>
